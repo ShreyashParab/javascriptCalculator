@@ -1,8 +1,6 @@
 
 # JAVASCRIPT CALACULATOR
 
-# JAVASCRIPT CALACULATOR
-
 It is a simple calculator made by javascript which can perform any arithmatic calculations at ease.
 Not only that this website is fully responsive so that you can use it on tablets and mobile too.
 ## Deployment
