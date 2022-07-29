@@ -1,4 +1,5 @@
 let displayArea = document.getElementById('display')
+let haveDot = 'false'
 
 function buttonClicked(x){
     if(displayArea.innerText.length >= 25)
@@ -65,16 +66,34 @@ function buttonClicked(x){
             return
         }
         
-        if(displayArea.innerText.includes('.') && x=='.')
+        if(x=='.')
         {
-            if(displayArea.innerText.includes('+') || displayArea.innerText.includes('-') ||  displayArea.innerText.includes('*') || displayArea.innerText.includes('/') || displayArea.innerText.includes('%'))
+            if(haveDot == 'false')
             {
                 displayArea.innerText += x
+                haveDot = 'true'
+                console.log(haveDot)
                 return
             }
-            displayArea.innerText += ''
+
+            if(haveDot = 'true')
+            {
+                displayArea.innerText += ''
+                console.log(haveDot)
+                return
+            }
+            haveDot = 'false'
             return
         }
+        else{
+            if(x=='+' || x =='-' || x =='*' || x=='/' || x=='%' && haveDot=='true')
+            {
+                displayArea.innerText += x 
+                haveDot = 'false'
+                return
+            }
+        }
+        
         displayArea.innerText += x         
     }           
 }
